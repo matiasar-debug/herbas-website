@@ -1,0 +1,130 @@
+/* Tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('fondo-herbas.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #3e2f1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado con fondo translúcido */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* Navegación */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3e2f1c;
+  font-weight: 600;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7c4d00;
+}
+
+/* Logo animado */
+.logo.animado {
+  width: 160px;
+  animation: pulse 2.5s infinite ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Animación */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Íconos */
+.icon {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Secciones con fondo translúcido */
+section {
+  max-width: 800px;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  margin: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #6b4f2c;
+}
+
+/* Fondo decorativo con logo */
+.marca-h {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  max-width: 100px;
+  max-height: 100px;
+  background-image: url('logo-h.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ocultar logo decorativo en pantallas pequeñas */
+@media (max-width: 600px) {
+  .marca-h {
+    display: none;
+  }
+}
+
+/* Animación de entrada para encabezado principal */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section h1 {
+  text-align: center;
+  animation: fadeUp 1.2s ease-out forwards;
+}
