@@ -128,3 +128,33 @@ section h1 {
   text-align: center;
   animation: fadeUp 1.2s ease-out forwards;
 }
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05); /* fondo translúcido */
+  transition: background 0.3s ease;
+}
+
+.contacto-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.contacto-item .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contacto-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contacto-item a:hover {
+  text-decoration: underline;
+}
